@@ -1,0 +1,7 @@
+#!/bin/bash
+echo -n "Enter folder name :- "
+read filename
+if [ -d "$filename" ]; then 
+	echo "$filename exits"
+else mkdir $filename;
+fi

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+random=$(( RANDOM % 51 ))
+
+echo $random
+for (( i=1 ; i <= 6 ; i++ )) 
+do	
+	
+        if (( i == 6 ))
+        then
+                echo "Better Luck Next time";
+		exit;
+        fi
+
+	read a;
+	case $random in
+		$a)
+		    echo "Here is your $i Prize";
+		    break;;
+	esac
+done
